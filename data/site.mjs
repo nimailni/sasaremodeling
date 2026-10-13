@@ -46,7 +46,7 @@ const serbianPhotos = {
   'tile-bathroom': ['Drvo koje otvara prostor', 'Svetao dnevni boravak sa otvorenim drvenim stepeništem i drvenim podom'],
   'wood-living-room': ['Toplina drvenog poda', 'Udoban dnevni boravak sa drvenim podom, nameštajem u neutralnim tonovima i prirodnim svetlom'],
   'wood-interior': ['Nežniji tonovi, topliji prostor', 'Dnevni boravak u neutralnim tonovima sa drvenim nameštajem i podom'],
-  'wood-trim': ['Detalji koji čine dom', 'Otvoren dnevni prostor sa toplim drvenim podom i svetlim nameštajem'],
+  'wood-trim': ['Detalji koji unose toplinu', 'Otvoren dnevni prostor sa toplim drvenim podom i svetlim nameštajem'],
 };
 export function getPhotos(language = 'en') {
   return photos.map(photo => language === 'sr' ? { ...photo, caption: serbianPhotos[photo.id][0], alt: serbianPhotos[photo.id][1] } : photo);

@@ -2,6 +2,8 @@
 
 The user requested a bilingual site after the original English-only draft. Serbian uses Latin script (`sr-Latn`). English uses `en`. The business name, owner name, telephone number, and email are retained as supplied.
 
+Serbian wording preference: use **kuća**, **prostor**, **stambeni prostor**, or **kod kuće** where natural instead of repeatedly using **dom**. The approved slogan is **Neka vaša kuća bude po vašoj meri.** Preserve this preference in future translations.
+
 | Page | English | Serbian |
 | --- | --- | --- |
 | Home | index.html | index-sr.html |

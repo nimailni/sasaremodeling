@@ -2,6 +2,8 @@
 
 ## October 12, 2026
 
+- Refined Serbian wording at the user's request: the slogan is now **Neka vaša kuća bude po vašoj meri.**, with **kuća** or **prostor** used naturally throughout the Serbian pages and gallery copy.
+
 - Added English and Serbian flags with labels at the top of every page.
 - Added complete Serbian translations in Latin script, with the same design and photos.
 - Language links switch to the matching page; navigation stays in the selected language.
