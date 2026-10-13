@@ -1,0 +1,140 @@
+Build a complete first draft of a website for Sasa Remodeling, a residential remodeling and installation business serving Houston and surrounding areas.
+
+The draft will be shown to the owner for feedback. Build it in English only for now.
+
+DESIGN REFERENCES
+
+Use https://suncoaststone.com/ as the main design reference, and the attached screenshot as the precise reference for the desktop navigation.
+
+Use https://suncoaststone.com/contact/ as inspiration for a simple contact page.
+
+Follow the reference’s overall visual direction, while using original copy and appropriately licensed sample images.
+
+BUSINESS DETAILS
+
+Business name: Sasa Remodeling
+Owner: Sasa Bulajic
+Phone: 713.301.8144
+Service area: Houston and surrounding areas
+Draft email: sasaremodeling@sasaremodeling.com
+
+The email is an unverified placeholder for this preview. Keep it easy to change and remind me about it in your handoff, without displaying that implementation note on the website.
+
+Services:
+- Home remodeling
+- Kitchen and bathroom remodeling
+- Tile installation, including showers and backsplashes
+- Natural stone installation
+- Hardwood flooring installation
+- Wood trim and stair work
+
+STYLE AND PERSONALITY
+
+Make the site warm, approachable, and professional.
+
+Use a light, warm background, dark navy text and buttons, and restrained terracotta/orange accents. Let the project photography provide much of the warmth.
+
+Use modern interiors with warm wood, natural stone, attractive tile, and soft lighting. Combine generous spacing, readable typography, and simple layouts.
+
+Create a clean text-based “Sasa Remodeling” logo.
+
+Write concise, natural copy for homeowners. Avoid exaggerated marketing language.
+
+NAVIGATION
+
+Match the attached screenshot closely:
+- Home
+- About us
+- Gallery
+- Contact us
+- Clickable phone number
+- Dark rectangular “Let’s talk” button
+
+Use a thin orange underline to indicate the active page.
+The “Let’s talk” button should open the Contact page.
+The phone link should use tel:+17133018144.
+
+Create four separate pages with working navigation, rather than one page with scrolling sections. Use the same header and footer throughout.
+
+On mobile, use a tidy accessible menu with easy access to the phone number and contact page.
+
+HOME PAGE
+
+Create:
+1. A prominent opening section with a beautiful modern interior photo, a concise headline, a short introduction, and links to the Gallery and Contact pages.
+
+Suggested headline:
+“Make your home feel more like you.”
+
+Suggested introductory direction:
+Remodeling, tile, wood, and stone installation for homes across Houston and surrounding areas.
+
+2. A clear services section, grouping related services into a few readable blocks.
+
+3. A small selection of sample gallery images.
+
+4. A short introduction to Sasa, linking to About us.
+
+5. A friendly closing invitation to discuss a project.
+
+ABOUT US PAGE
+
+Introduce Sasa Bulajic and the services offered by Sasa Remodeling.
+
+Keep the copy basic, friendly, and easy to update. Focus on helping homeowners improve their spaces and discussing their ideas.
+
+Do not invent years of experience, qualifications, licenses, insurance, awards, reviews, completed-project counts, company history, or team members.
+
+GALLERY PAGE
+
+Create an attractive photo gallery with approximately 8–12 sample images showing:
+- Kitchens
+- Bathrooms and showers
+- Tile and stone details
+- Hardwood floors and wood details
+
+Use simple category filters if they improve browsing.
+Allow visitors to open photos in a larger view, with accessible controls and mobile support.
+
+These are inspiration images for the preview, not Sasa’s actual projects. Include one tasteful, clearly visible note explaining this. Do not invent client names, project locations, testimonials, or before-and-after results.
+
+CONTACT PAGE
+
+Keep it simple and welcoming, following the reference:
+- A heading such as “Let’s talk about your home.”
+- Clickable phone number
+- Draft email address
+- Houston and surrounding areas
+- Brief guidance asking visitors to share the room or project, location, approximate timing, and any photos or inspiration
+
+Use direct phone and email contact for this draft. A submission form is unnecessary.
+
+PHOTOS AND EDITING
+
+Use appropriately licensed sample photography. Do not reuse the reference business’s project photos.
+
+Make image replacement straightforward:
+- Keep image paths, captions, categories, and alt text in one clearly organized configuration or data file.
+- Use descriptive filenames.
+- Keep business contact details in a central place.
+- Provide brief instructions explaining how to replace the sample photos and update the email.
+
+LANGUAGES
+
+Complete the English draft first.
+
+Later, we will add English and Serbian buttons at the top of the site and a working language switch.
+
+For this first draft, do not display language buttons or implement Serbian translations. Organize the content so translation can be added afterward.
+
+IMPLEMENTATION AND VERIFICATION
+
+Use the existing project’s framework if there is one. Otherwise, choose a simple, maintainable setup suitable for this small website.
+
+Make all four pages responsive and accessible. Use readable contrast, descriptive image alt text, visible keyboard focus, and working navigation.
+
+Check desktop and mobile layouts, gallery behavior, and phone/email links. Make sure images load and there are no horizontal overflow issues.
+
+Build and run the local preview so I can review it. Keep publishing as a separate later step.
+
+At the end, give me the preview address, summarize what you built, and explain where to replace photos and business details.
