@@ -13,6 +13,7 @@ Files:
 - `RECOVERY-AND-UPDATES.md`: restore on another PC and publish updates.
 - `PHOTO-SOURCES.md`: sample image URLs and licensing reference.
 - `VERIFICATION.md`: completed checks and owner review items.
+- `DEPLOYMENT.md`: private repository status and publication decision.
 
 These notes are intended to travel with the GitHub repository. If the repository becomes public, these notes are public too. They contain build instructions and supplied business details, not credentials or private client information.
 

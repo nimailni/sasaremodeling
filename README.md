@@ -28,3 +28,5 @@ Rebuild after changing source content. The generated HTML pages are committed at
 The business email is currently an **unverified placeholder**: `sasaremodeling@sasaremodeling.com`. Confirm it with Sasa before relying on email contact. Git commit email is separate from the business contact email.
 
 See `NOTES/RECOVERY-AND-UPDATES.md` for transferring to another computer and the edit → verify → commit → push workflow.
+
+Current status: committed and pushed to the private `nimailni/sasaremodeling` repository. GitHub Pages is not enabled; the user chose to keep the draft private for now. See `NOTES/DEPLOYMENT.md` before publishing.
