@@ -11,7 +11,7 @@ export const business = {
 // English content is separate so another language can be added later.
 export const english = {
   nav: [['index.html', 'Home'], ['about.html', 'About us'], ['gallery.html', 'Gallery'], ['contact.html', 'Contact us']],
-  hero: { eyebrow: 'HOME REMODELING · HOUSTON, TEXAS', title: 'Make your home feel more like you.', intro: 'Remodeling, tile, wood, and stone installation for homes across Houston and surrounding areas.' },
+  hero: { eyebrow: 'HOME REMODELING · HOUSTON, TEXAS', title: business.name, tagline: 'Make your home feel more like you.', intro: 'Remodeling, tile, wood, and stone installation for homes across Houston and surrounding areas.' },
   galleryNote: 'A little inspiration: these sample photos show ideas and materials, not completed Sasa Remodeling projects.',
   services: [
     { number: '01', title: 'Spaces for everyday living', text: 'Home, kitchen, and bathroom remodeling. Bring your ideas for a room that works better and feels more like home.', detail: 'Home remodeling · Kitchens · Bathrooms', photo: 'kitchen-island' },
