@@ -13,11 +13,11 @@ Files:
 - `RECOVERY-AND-UPDATES.md`: restore on another PC and publish updates.
 - `PHOTO-SOURCES.md`: sample image URLs and licensing reference.
 - `VERIFICATION.md`: completed checks and owner review items.
-- `DEPLOYMENT.md`: private repository status and publication decision.
+- `DEPLOYMENT.md`: live website, Pages settings, and publication approval.
 - `LANGUAGES.md`: English/Serbian pages, flags, and translation editing.
 - `CHANGELOG.md`: approved changes since the initial draft.
 
-These notes are intended to travel with the GitHub repository. If the repository becomes public, these notes are public too. They contain build instructions and supplied business details, not credentials or private client information.
+These notes travel with the public GitHub repository. They contain build instructions and supplied business details, not credentials or private client information.
 
 The site now includes English and Serbian (Latin script), as requested after the initial draft. The original BUILD-BRIEF.txt records the initial English-only scope; the later bilingual request supersedes that language restriction.
 

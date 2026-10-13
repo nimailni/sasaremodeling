@@ -3,17 +3,20 @@
 Recorded October 12, 2026 (America/Chicago).
 
 - Repository: https://github.com/nimailni/sasaremodeling
-- Visibility: **private**, as explicitly selected by the user after reviewing the publication choice.
+- Visibility: **public**, explicitly approved by the user before deployment.
 - Branch: `main`
 - Remote: `origin`
 - First website commit: `6346703`
-- GitHub authentication, private repository creation, commit, and push succeeded.
-- Working tree was clean after the first push.
-- GitHub Pages is **not enabled**. There is no published live website URL yet.
-- The user said **Keep it private for now**. Do not make it public without renewed explicit approval.
+- GitHub authentication, repository creation, commit, and push succeeded.
+- GitHub Pages is enabled: **Deploy from a branch → main → / (root)**.
+- Live website: https://nimailni.github.io/sasaremodeling/
+- The user initially kept the draft private, then explicitly selected **Yes, make it public and deploy**. That later approval supersedes the earlier keep-private preference.
+- GitHub Pages reported **built** with no error for website commit `3c6695ea2d02fe9af7a5007f9243498becd9ea33`.
+- All four pages in both languages verified on the published URL at desktop and mobile widths, including image loading, same-page language switching, gallery controls, and contact links.
+- Draft business email remains unverified: `sasaremodeling@sasaremodeling.com`. Confirm or update it with the owner.
 
 Local review: http://localhost:4173 while `npm start` is running.
 
-When publication is approved, check repository visibility and Pages eligibility. For the current static layout, enable Pages from `main` and `/ (root)`, wait for deployment, then verify all four pages in both languages, language switching, and assets at https://nimailni.github.io/sasaremodeling/ before describing that URL as live.
+Future updates: edit → `npm run build` → `npm run check` → preview → commit → push. Commit all eight generated HTML pages after content changes. Pushing to `main` automatically starts the Pages deployment. Check the repository's Actions tab and verify the live result afterward.
 
 The previous `nimailni/moore-therapy` repository was not modified.

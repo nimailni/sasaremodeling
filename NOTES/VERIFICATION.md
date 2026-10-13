@@ -16,6 +16,9 @@ Completed October 12, 2026 (America/Chicago).
 - Language switching works without JavaScript.
 - Serbian navigation, filters, captions, image alt text, photo-viewer controls, and live filter status are translated.
 - Mobile menu begins below the full header, including the language bar.
+- Published website verified at https://nimailni.github.io/sasaremodeling/: all eight pages and assets loaded successfully at desktop and mobile widths, with no browser errors or failed HTTP responses.
+- Live language switching, Serbian navigation, gallery filter/viewer, Saša spelling, updated slogan, and phone/email links passed checks.
+- GitHub Pages reported a successful build with no deployment error, using `main` and `/ (root)`.
 - Phone link is `tel:+17133018144`; email link is `mailto:sasaremodeling@sasaremodeling.com`.
 - Desktop and mobile screenshots inspected visually.
 - Staged source files scanned before the first commit for common credential patterns and unintended private files; none detected. Local admin helpers, credentials, browser screenshots, and runtime files are excluded from Git.

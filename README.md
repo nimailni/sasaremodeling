@@ -30,4 +30,6 @@ The business email is currently an **unverified placeholder**: `sasaremodeling@s
 
 See `NOTES/RECOVERY-AND-UPDATES.md` for transferring to another computer and the edit → verify → commit → push workflow.
 
-Current status: committed and pushed to the private `nimailni/sasaremodeling` repository. GitHub Pages is not enabled; the user chose to keep the draft private for now. See `NOTES/DEPLOYMENT.md` before publishing.
+Live website: https://nimailni.github.io/sasaremodeling/
+
+Current status: the user approved making `nimailni/sasaremodeling` public and deploying the site. GitHub Pages is enabled from `main` and `/ (root)`. Future pushes deploy automatically. See `NOTES/DEPLOYMENT.md` for the verified deployment record.
