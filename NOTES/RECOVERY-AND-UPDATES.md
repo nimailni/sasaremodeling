@@ -34,7 +34,7 @@ npm run check
 npm start
 # Review desktop/mobile pages and interactions, then stop the preview with Ctrl+C.
 git diff
-git add README.md NOTES data scripts assets index.html about.html gallery.html contact.html package.json .gitignore .nojekyll
+git add README.md NOTES data scripts assets "*.html" package.json .gitignore .nojekyll
 git commit -m "Describe the website update"
 git push origin main
 ```

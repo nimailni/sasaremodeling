@@ -1,4 +1,8 @@
-import { photos } from '../data/site.mjs';
+import { getPhotos } from '../data/site.mjs';
+import { locales } from '../data/locales.mjs';
+const language = document.documentElement.dataset.language || 'en';
+const photos = getPhotos(language);
+const text = locales[language];
 
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.main-nav');
@@ -18,7 +22,7 @@ filters.forEach(filter => filter.addEventListener('click', () => {
   const category = filter.dataset.category;
   filters.forEach(item => item.setAttribute('aria-pressed',String(item === filter)));
   cards.forEach(card => { const photo = photos.find(item => item.id === card.dataset.photo); card.hidden = category !== 'All photos' && !(photo.categories || [photo.category]).includes(category); });
-  document.querySelector('#gallery-status').textContent = `Showing ${cards.filter(card => !card.hidden).length} photos${category === 'All photos' ? '' : ` in ${category}`}`;
+  document.querySelector('#gallery-status').textContent = text.photoStatus(cards.filter(card => !card.hidden).length, category);
 }));
 
 const dialog = document.querySelector('.lightbox');

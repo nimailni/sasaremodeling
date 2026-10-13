@@ -2,6 +2,12 @@
 
 ## October 12, 2026
 
+- Added English and Serbian flags with labels at the top of every page.
+- Added complete Serbian translations in Latin script, with the same design and photos.
+- Language links switch to the matching page; navigation stays in the selected language.
+- Translated gallery captions, photo alt text, category labels, and accessible menu/viewer controls.
+- Generated four additional static `*-sr.html` pages, compatible with the existing Pages root deployment setup.
+
 - Promoted **Sasa Remodeling** to the main Home page headline over the opening photo.
 - Kept **Make your home feel more like you.** directly below as a smaller tagline.
 - The header logo remains in its original position.

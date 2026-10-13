@@ -19,12 +19,14 @@ const assert = (condition, message) => { if (!condition) throw new Error(message
   const results = [];
   for (const width of [1440,768,390,320]) {
     await page.setViewportSize({width,height:1000});
-    for (const file of ['index.html','about.html','gallery.html','contact.html']) {
+    for (const file of ['index.html','about.html','gallery.html','contact.html','index-sr.html','about-sr.html','gallery-sr.html','contact-sr.html']) {
       await page.goto(`http://localhost:4173/${file}`);
       await page.locator('img[src]').evaluateAll(images => Promise.all(images.map(image => { image.loading = 'eager'; return image.decode(); })));
       const info = await page.evaluate(() => ({overflow:document.documentElement.scrollWidth>innerWidth, heading:document.querySelectorAll('h1').length, current:document.querySelectorAll('[aria-current=page]').length, images:[...document.querySelectorAll('img[src]')].every(image=>image.complete&&image.naturalWidth>0), phone:document.querySelector('.header-phone').getAttribute('href')}));
       assert(!info.overflow,`${file} overflows at ${width}`);
       assert(info.heading===1&&info.current===1&&info.images&&info.phone==='tel:+17133018144',`${file} failed page check at ${width}`);
+      assert(await page.locator('.language-switch a:visible').count()===2,`${file}: language choices not visible at ${width}`);
+      assert(await page.locator('html').getAttribute('lang')===(file.includes('-sr')?'sr-Latn':'en'),`${file}: incorrect document language`);
       if (width===1440||width===390) await page.screenshot({path:`qa-output/${file.replace('.html','')}-${width}.png`,fullPage:true});
       results.push(`${file} @ ${width}: pass`);
     }
@@ -48,8 +50,42 @@ const assert = (condition, message) => { if (!condition) throw new Error(message
   assert(await page.locator('.menu-toggle').getAttribute('aria-expanded')==='false','Mobile menu Escape failed');
   await page.goto('http://localhost:4173/contact.html');
   assert(await page.locator('.contact-email').getAttribute('href')==='mailto:sasaremodeling@sasaremodeling.com','Email link failed');
+  for (const name of ['index','about','gallery','contact']) {
+    await page.goto(`http://localhost:4173/${name}.html`);
+    await page.locator('.language-switch').getByRole('link',{name:'Serbian',exact:true}).click();
+    assert(new URL(page.url()).pathname===`/${name}-sr.html`,'Serbian switch did not keep the current page');
+    assert(await page.locator('.language-switch a[aria-current=true]').textContent()==='Serbian','Serbian active language incorrect');
+    assert(await page.locator('.main-nav a[aria-current=page]').textContent()===({index:'Početna',about:'O nama',gallery:'Galerija',contact:'Kontakt'})[name],'Serbian navigation is not translated');
+    await page.reload();
+    assert(await page.locator('html').getAttribute('lang')==='sr-Latn','Serbian language lost after reload');
+    await page.locator('.language-switch').getByRole('link',{name:'English',exact:true}).click();
+    assert(new URL(page.url()).pathname===`/${name}.html`,'English switch did not keep the current page');
+  }
+  await page.goto('http://localhost:4173/gallery-sr.html');
+  await page.getByRole('button',{name:'Kupatila',exact:true}).click();
+  assert(await page.locator('.gallery-card:visible').count()===2,'Serbian filter failed');
+  assert((await page.locator('#gallery-status').textContent()).includes('Broj prikazanih fotografija: 2 — Kupatila'),'Serbian live status is not translated');
+  await page.locator('.gallery-card:visible').first().click();
+  assert(await page.getByRole('button',{name:'Zatvori fotografiju',exact:true}).isVisible(),'Serbian viewer controls not translated');
+  assert(await page.locator('.lightbox-caption').textContent()==='Miran početak dana','Serbian viewer caption not translated');
+  assert((await page.locator('.lightbox-image').getAttribute('alt')).startsWith('Kupatilo'),'Serbian viewer alt not translated');
+  await page.keyboard.press('ArrowRight');
+  assert(await page.locator('.lightbox-count').textContent()==='2 / 2','Serbian viewer navigation failed');
+  await page.keyboard.press('Escape');
+  await page.getByRole('button',{name:'Meni',exact:true}).click();
+  const menuPosition=await page.evaluate(()=>({header:document.querySelector('.site-header').getBoundingClientRect().bottom,menu:document.querySelector('.main-nav').getBoundingClientRect().top}));
+  assert(Math.abs(menuPosition.header-menuPosition.menu)<=1,'Mobile menu overlaps the header');
+  await page.locator('.main-nav').getByRole('link',{name:'Kontakt',exact:true}).click();
+  assert(new URL(page.url()).pathname==='/contact-sr.html','Serbian language lost during page navigation');
+  assert(await page.locator('.contact-email').getAttribute('href')==='mailto:sasaremodeling@sasaremodeling.com','Serbian email link failed');
+  const noJs=await browser.newContext({javaScriptEnabled:false});
+  const noJsPage=await noJs.newPage();
+  await noJsPage.goto('http://localhost:4173/about.html');
+  await noJsPage.locator('.language-switch').getByRole('link',{name:'Serbian',exact:true}).click();
+  assert(await noJsPage.locator('html').getAttribute('lang')==='sr-Latn','Language switch fails without JavaScript');
+  await noJs.close();
   assert(errors.length===0,`Browser errors: ${errors.join('; ')}`);
   await browser.close();
-  await fs.writeFile('qa-output/results.txt',results.join('\n')+'\nGallery filters, viewer arrow/Escape/focus, mobile menu, email: pass\nNo page errors or HTTP failures.\n');
+  await fs.writeFile('qa-output/results.txt',results.join('\n')+'\nGallery filters, viewer arrow/Escape/focus, mobile menu, email: pass\nBilingual same-page switching, reload, navigation, Serbian viewer/alt/status, and switching without JavaScript: pass\nNo page errors or HTTP failures.\n');
   console.log(await fs.readFile('qa-output/results.txt','utf8'));
 })().catch(error => { console.error(error); process.exitCode=1; });

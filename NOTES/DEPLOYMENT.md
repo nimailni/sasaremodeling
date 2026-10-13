@@ -14,6 +14,6 @@ Recorded October 12, 2026 (America/Chicago).
 
 Local review: http://localhost:4173 while `npm start` is running.
 
-When publication is approved, check repository visibility and Pages eligibility. For the current static layout, enable Pages from `main` and `/ (root)`, wait for deployment, then verify all four pages and assets at https://nimailni.github.io/sasaremodeling/ before describing that URL as live.
+When publication is approved, check repository visibility and Pages eligibility. For the current static layout, enable Pages from `main` and `/ (root)`, wait for deployment, then verify all four pages in both languages, language switching, and assets at https://nimailni.github.io/sasaremodeling/ before describing that URL as live.
 
 The previous `nimailni/moore-therapy` repository was not modified.

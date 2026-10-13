@@ -8,7 +8,7 @@ export const business = {
   serviceArea: 'Houston and surrounding areas',
 };
 
-// English content is separate so another language can be added later.
+// English content is shared with the bilingual page builder in data/locales.mjs.
 export const english = {
   nav: [['index.html', 'Home'], ['about.html', 'About us'], ['gallery.html', 'Gallery'], ['contact.html', 'Contact us']],
   hero: { eyebrow: 'HOME REMODELING · HOUSTON, TEXAS', title: business.name, tagline: 'Make your home feel more like you.', intro: 'Remodeling, tile, wood, and stone installation for homes across Houston and surrounding areas.' },
@@ -34,3 +34,20 @@ export const photos = [
   { id: 'wood-interior', file: 'wood-floor-and-interior-details.jpg', category: 'Wood details', caption: 'A softer, warmer living space', alt: 'Neutral living room with wood furniture and flooring', unsplashId: 'photo-1616486338812-3dadae4b4ace' },
   { id: 'wood-trim', file: 'warm-wood-and-open-living.jpg', category: 'Wood details', caption: 'Details that feel at home', alt: 'Open living space with warm wood flooring and light-colored furnishings', unsplashId: 'photo-1600607687939-ce8a6c25118c' },
 ].map(photo => ({ ...photo, src: `assets/images/${photo.file}`, source: `https://images.unsplash.com/${photo.unsplashId}`, license: 'https://unsplash.com/license' }));
+
+// Serbian photo copy stays beside the shared image paths and English metadata.
+const serbianPhotos = {
+  'warm-kitchen': ['Kuhinja za zajedničke trenutke', 'Moderna bela kuhinja sa kamenom radnom pločom, sivom zidnom oblogom i šarenim posuđem'],
+  'kitchen-island': ['Svetlost, tekstura i prostor za svaki dan', 'Bela kuhinja sa otvorenim policama, drvenim detaljima i centralnim ostrvom'],
+  'kitchen-counter': ['Prostor za svakodnevni život', 'Moderni kuhinjski elementi i radne ploče u svetlim tonovima'],
+  'bathroom-vanity': ['Miran početak dana', 'Kupatilo sa samostojećom kadom, belim ormarićem sa umivaonikom i sivim podnim pločicama'],
+  'bathroom-shower': ['Jednostavne linije, pažljivo odabrani detalji', 'Kupatilo sa staklenom tuš-kabinom, svetlim zidnim pločicama, podom sa izgledom drveta i dugačkim ormarićem'],
+  'stone-interior': ['Materijali koji povezuju prostor', 'Moderna trpezarija sa drvenim podom, stepeništem i vertikalnim drvenim detaljima'],
+  'tile-bathroom': ['Drvo koje otvara prostor', 'Svetao dnevni boravak sa otvorenim drvenim stepeništem i drvenim podom'],
+  'wood-living-room': ['Toplina drvenog poda', 'Udoban dnevni boravak sa drvenim podom, nameštajem u neutralnim tonovima i prirodnim svetlom'],
+  'wood-interior': ['Nežniji tonovi, topliji prostor', 'Dnevni boravak u neutralnim tonovima sa drvenim nameštajem i podom'],
+  'wood-trim': ['Detalji koji čine dom', 'Otvoren dnevni prostor sa toplim drvenim podom i svetlim nameštajem'],
+};
+export function getPhotos(language = 'en') {
+  return photos.map(photo => language === 'sr' ? { ...photo, caption: serbianPhotos[photo.id][0], alt: serbianPhotos[photo.id][1] } : photo);
+}

@@ -14,9 +14,11 @@ Files:
 - `PHOTO-SOURCES.md`: sample image URLs and licensing reference.
 - `VERIFICATION.md`: completed checks and owner review items.
 - `DEPLOYMENT.md`: private repository status and publication decision.
+- `LANGUAGES.md`: English/Serbian pages, flags, and translation editing.
+- `CHANGELOG.md`: approved changes since the initial draft.
 
 These notes are intended to travel with the GitHub repository. If the repository becomes public, these notes are public too. They contain build instructions and supplied business details, not credentials or private client information.
 
-The first draft is English only. Serbian translation and a language switch are planned for a later update.
+The site now includes English and Serbian (Latin script), as requested after the initial draft. The original BUILD-BRIEF.txt records the initial English-only scope; the later bilingual request supersedes that language restriction.
 
 Business email `sasaremodeling@sasaremodeling.com` is an unverified placeholder and must be confirmed with the owner.

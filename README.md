@@ -1,8 +1,8 @@
 # Sasa Remodeling
 
-English first draft for a residential remodeling and installation business serving Houston and surrounding areas.
+Bilingual English and Serbian draft for a residential remodeling and installation business serving Houston and surrounding areas.
 
-Four pages: Home, About us, Gallery, Contact us. The gallery has category filters and a photo viewer with keyboard, touch, and focus support. Sample photography is clearly identified as inspiration.
+Four pages in each language: Home, About us, Gallery, Contact us. Flag links at the top switch to the matching page. Serbian uses Latin script. The gallery has translated category filters and a photo viewer with keyboard, touch, and focus support. Sample photography is clearly identified as inspiration.
 
 ## Edit and preview
 
@@ -16,8 +16,9 @@ npm start
 
 Open http://localhost:4173. Keep the preview terminal running while reviewing.
 
-- Contact details, English copy, photo paths, captions, categories, and alt text: `data/site.mjs`
-- Shared page structure and longer page copy: `scripts/build.mjs`
+- Contact details, shared photo paths, English/Serbian photo captions and alt text: `data/site.mjs`
+- Page copy, navigation, controls, and translations: `data/locales.mjs` (English hero/services also use `english` in `data/site.mjs`)
+- Shared page structure and generation: `scripts/build.mjs`
 - Colors, spacing, responsive layout: `assets/styles.css`
 - Menu, filters, photo viewer: `assets/app.js`
 - Local photos: `assets/images/`
