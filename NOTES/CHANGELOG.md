@@ -2,6 +2,8 @@
 
 ## October 12, 2026
 
+- Updated the Serbian spelling to **Saša**, including logo, headline, footer, page titles, and grammatical forms such as **Sašu** and **Sašom**.
+
 - Refined Serbian wording at the user's request: the slogan is now **Neka vaša kuća bude po vašoj meri.**, with **kuća** or **prostor** used naturally throughout the Serbian pages and gallery copy.
 
 - Added English and Serbian flags with labels at the top of every page.

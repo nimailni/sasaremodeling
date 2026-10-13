@@ -1,6 +1,6 @@
 # English and Serbian
 
-The user requested a bilingual site after the original English-only draft. Serbian uses Latin script (`sr-Latn`). English uses `en`. The business name, owner name, telephone number, and email are retained as supplied.
+The user requested a bilingual site after the original English-only draft. Serbian uses Latin script (`sr-Latn`). English uses `en`. At the user's request, the Serbian pages use **Saša** (including **Sašu**, **Sašom**, and **SAŠA**) in the brand, logo, owner references, headings, and page titles. English continues to use **Sasa**. Telephone numbers, email addresses, repository names, and file paths retain their original spelling.
 
 Serbian wording preference: use **kuća**, **prostor**, **stambeni prostor**, or **kod kuće** where natural instead of repeatedly using **dom**. The approved slogan is **Neka vaša kuća bude po vašoj meri.** Preserve this preference in future translations.
 
